@@ -1,0 +1,17 @@
+{
+  "name": "Get title and url",
+  "description": "タイトルタグとURLを取得する拡張機能",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["jquery-2.2.0.min.js","content_script.js"]
+  }]
+}
