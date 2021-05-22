@@ -1,14 +1,12 @@
 ﻿//----------------------
-console.log('content_script');
+// console.log('content_script');
 
 function test(){
     var elems = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     var construction = '';
     elems.forEach(elm => {
-        var space = '';
         var num = elm.nodeName.replace(/[^0-9]/g, '');// 見出しタグの番号取得
-        for (var i = 0; i < num; i++){space+=' '};// 読みやすいよう字下げ
-        construction += space + elm.nodeName.toLowerCase()+':'+elm.textContent.replace(/\s+/g, '') + '\n';
+        construction += '<div style="margin-left:'+num+'em">' + elm.nodeName.toLowerCase()+':'+elm.textContent.replace(/\s+/g, '') + '</div>';
     });
     return construction;
 }
