@@ -1,10 +1,11 @@
 {
-  "name": "Get title and url",
-  "description": "タイトルタグとURLを取得する拡張機能",
+  "name": "Get h-title",
+  "description": "見出し要素を取得する拡張機能",
   "version": "1.0.0",
   "manifest_version": 2,
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "browser_action": {
     "default_title": "",

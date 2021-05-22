@@ -2,14 +2,11 @@
 
 console.log('background.js');
 
-var textTitle = '';
-var textUrl = '';
 
+var elems = '';
 chrome.runtime.onMessage.addListener(
-    function (request, sender, sendResponse) {
-        textTitle = request.value;
-        textUrl = request.url;
+    function(request,sender,sendResponse){
+      elems = request.value;
+      sendResponse({returnValue: "受け取りました！"});
     }
-);
-
-
+  );
